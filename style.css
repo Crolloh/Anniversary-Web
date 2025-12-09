@@ -1,0 +1,85 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+#welc {
+    color: pink;
+    margin: 0;
+    font-family: 'Delius', cursive;
+    font-size: 1.5rem;
+}
+.navbar {
+    font-family: cursive;
+    display: flex;
+    gap: 20px;
+    color: pink;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: crimson;
+    transform: scale(1.1);
+}
+.intro {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    padding: 225px;
+    font-size: 3rem;
+    border: 2px solid black;
+    background: linear-gradient(-45deg, #726b71, #F0796E, crimson, #CC6CE7);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#hi-babe {
+    color: lightpink;
+    margin: 0;
+    font-family: 'Playfair Display', cursive;
+}
+#happy-anniversary {
+    font-family: 'Playfair Display', cursive;
+    margin-top: 0;
+    color: pink;
+}
+#heart-btn {
+    color: white;
+    font-family: cursive;
+    background-color: #db4b3e;
+    margin: 0 auto;
+    width: 350px;
+    height: 75px;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 999px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.3);
+}
+@keyframes pulsing-button {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+#heart-btn:hover {
+    animation: pulsing-button 0.6s ease-in-out infinite
+}
