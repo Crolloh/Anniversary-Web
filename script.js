@@ -27,5 +27,13 @@
 })();
 
 (function() { //letter
-    pass
-})
+    const btn = document.getElementById('letter-button');
+    const container = document.querySelector('.letter-text')
+
+    btn.addEventListener('click', () =>{
+        if (container.style.display === "none"){
+            container.style.display = 'block';
+        }else
+            container.style.display = "none";
+    })
+})();
