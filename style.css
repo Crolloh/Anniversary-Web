@@ -32,12 +32,12 @@ body {
     justify-content:center;
     flex-direction: column;
     align-items:center;
-    padding: 225px;
+    padding: 150px;
     font-size: 3rem;
-    border: 2px solid black;
     background: linear-gradient(-45deg, #726b71, #F0796E, crimson, #CC6CE7);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
+    margin-top: 0;
 }
 @keyframes gradient {
     0% {
@@ -82,4 +82,81 @@ body {
 }
 #heart-btn:hover {
     animation: pulsing-button 0.6s ease-in-out infinite
+}
+#heart-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 9999;
+}
+.heart {
+    position: absolute;
+    font-size: 100px;
+    transform: scale(1), translateY(0);
+    will-change: transform, opacity;
+    user-select: none;
+}
+.heart.animate {
+    animation: floatUp 1.8s cubic-bezier(.22, .9, .35, 1) forwards;
+}
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1) rotate(0);
+        opacity: 100%;
+        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2))
+    }
+    40% {
+        transform: translateY(-70) scale(1.05) rotate(25deg);
+        opacity: 95%;
+        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2))
+    }
+    100% {
+        transform: translateY(-200px) scale(0.7) rotate(-15deg);
+        opacity: 0%;
+        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2))
+    }
+}
+.letter {
+    background-color: #EDDFE1;
+    margin: 0;
+    padding: 0;
+}
+#letter-for-u {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', cursive;
+    color: crimson;
+}
+#letter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: cursive;
+    color: white;
+    background-color: lightpink;
+    font-size: 2rem;
+    border: none;
+    border-radius: 999px;
+    padding: 20px;
+    box-shadow: 5px 4px 10px rgba(0, 0 ,0 ,0.3);
+}
+.letter-text {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin: 0 auto;
+    width: 65%;
+    height: 30%;
+    padding: 150px;
+    margin-top: 25px;
+}
+.text-letter {
+    color:aquamarine;
+    font-family: cursive;
+    font-size: 1.75rem;
 }
