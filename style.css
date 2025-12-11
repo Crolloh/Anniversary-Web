@@ -37,7 +37,6 @@ body {
     background: linear-gradient(-45deg, #726b71, #F0796E, crimson, #CC6CE7);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
-    margin-top: 0;
 }
 @keyframes gradient {
     0% {
@@ -119,8 +118,6 @@ body {
 }
 .letter {
     background-color: #EDDFE1;
-    margin: 0;
-    padding: 0;
 }
 #letter-for-u {
     display: flex;
@@ -128,6 +125,7 @@ body {
     align-items: center;
     font-family: 'Playfair Display', cursive;
     color: crimson;
+    padding: 25px;
 }
 #letter-button {
     display: flex;
@@ -145,7 +143,7 @@ body {
 }
 .letter-text {
     background-color: pink;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: left;
     align-items: left;
@@ -156,7 +154,14 @@ body {
     margin-top: 25px;
 }
 .text-letter {
-    color:aquamarine;
+    color: beige;
     font-family: cursive;
     font-size: 1.75rem;
+}
+#dear, #ending-letter {
+    color: crimson
+}
+#ending-letter {
+    display: flex;
+    justify-content: right;
 }
