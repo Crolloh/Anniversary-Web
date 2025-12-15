@@ -37,3 +37,45 @@
             container.style.display = "none";
     })
 })();
+
+(function() { //bg music and sfx
+    const music = document.getElementById('bg-music');
+    const playpause = document.getElementById('playpause');
+    const mute = document.getElementById('mute');
+    const volume = document.getElementById('volume');
+    const papersfx = document.getElementById('paper-sfx');
+    const btn = document.getElementById('letter-button');
+    const container = document.querySelector('.letter-text')
+
+    music.volume= 0.5;
+    papersfx.volume= 0.25;
+
+    playpause.addEventListener('click', ()=> { 
+        if (music.paused) {
+            music.play();
+            playpause.textContent = 'Pause';
+        } else {
+            music.pause();
+            playpause.textContent ='Play';
+        }
+    });
+    mute.addEventListener('click', () => {
+        if (music.muted === false) {
+            music.muted = true;
+            mute.textContent = 'Muted';
+        } else {
+            music.muted = false;
+            mute.textContent = 'Mute';
+        }
+    });
+    volume.addEventListener('input', () => {
+        music.volume = volume.value;
+    });
+    btn.addEventListener('click', () => {
+        if (container.style.display === 'block') {
+           setTimeout(() => {
+            papersfx.play();
+        }, 450); 
+        }     
+    })
+})();
