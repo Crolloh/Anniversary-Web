@@ -240,3 +240,26 @@ input[type=range]::-webkit-slider-thumb {
     color: crimson;
     font-family: 'Playfair Display', cursive;
 }
+.photo-album {
+    display: flex;
+    flex-direction:column;
+}
+img {
+    width: 250px;
+    height: 300px;
+    gap: 25px;
+}
+#feb-photo1 {
+    width: 400px;
+    height: 300px;
+}
+#mar-photo2 {
+    width: 400px;
+    height: 300px;
+}
+#dec-photo3 {
+    width: 400px;
+    height: 300px;
+}
+.feb-photo {
+}
