@@ -49,6 +49,54 @@ body {
         background-position: 0% 50%;
     }
 }
+.music-controls {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    gap: 10px;
+}
+.music-controls button{
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: cursive;
+    border:rgba(0, 0 ,0 ,0.3);
+    border-radius: 999px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #FF96AB;
+    color: white;
+}
+.music-controls button:hover {
+    transform: scale(1.1);
+    color: crimson;
+}
+.music-controls input[type="range"] {
+    -webkit-appearance: none;
+    color: pink;
+    cursor: pointer;
+    background: pink;
+    border: rgba(0, 0 ,0 ,0.3);
+    border-radius: 999px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #A6A6A6;
+  background: #FF96AB;
+  border-radius: 2px;
+  border: 2px solid #F27B7F;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 3px 3px 4px #A6A6A6;
+  border: 2px solid #F27B7F;
+  height: 17px;
+  width: 30px;
+  border-radius: 0px;
+  background: #FF96AB;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
+}
 #hi-babe {
     color: lightpink;
     margin: 0;
@@ -182,4 +230,13 @@ body {
 #ending-letter {
     display: flex;
     justify-content: right;
+}
+.photo-album {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#photo-text {
+    color: crimson;
+    font-family: 'Playfair Display', cursive;
 }
