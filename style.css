@@ -237,8 +237,15 @@ input[type=range]::-webkit-slider-thumb {
     align-items: center;
 }
 #photo-text {
-    color: crimson;
+    display: flex;
+    color: white;
     font-family: 'Playfair Display', cursive;
+    background-color: crimson;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: 5px 4px 10px rgba(0, 0 ,0 ,0.3);
 }
 .photo-album {
     display: flex;
@@ -247,7 +254,10 @@ input[type=range]::-webkit-slider-thumb {
 img {
     width: 250px;
     height: 300px;
-    gap: 25px;
+    box-shadow: 7px 4px 10px rgba(0, 0 ,0 ,0.5);
+    animation: appearpics linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 #feb-photo1 {
     width: 400px;
@@ -261,5 +271,70 @@ img {
     width: 400px;
     height: 300px;
 }
-.feb-photo {
+.jan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;             
+    justify-content: center;
+    background-color:pink;
+    width: 100%;
+    padding: 100px;
+}
+.feb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;             
+    justify-content: center;
+    background-color:#F0796E;
+    width: 100%;
+    padding: 100px;
+}
+.march {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 175px;             
+    justify-content: center;
+    background-color:pink;
+    width: 100%;
+    padding: 100px;
+}
+.dec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 175px;             
+    justify-content: center;
+    background-color:#F0796E;
+    width: 100%;
+    padding: 100px;
+}
+.heads {
+    display: flex;
+    color: crimson;
+    font-family: cursive;
+    background-color:lightpink;
+    border: dotted 2px #F0796E;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    font-size: 2rem;
+}
+@keyframes appearpics {
+    from {
+        opacity: 0;
+        scale: 0;
+    } 
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.footer {
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+}
+#footer-text {
+    color: crimson;
+    font-family: 'Playfair Display', cursive;
+    font-size: 2rem;
 }
