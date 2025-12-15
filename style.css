@@ -253,61 +253,53 @@ input[type=range]::-webkit-slider-thumb {
     flex-direction:column;
 }
 img {
-    width: 250px;
-    height: 300px;
+    width: 100%;
+    max-width: 250px;  
+    height: auto;
     box-shadow: 7px 4px 10px rgba(0, 0 ,0 ,0.5);
     animation: appearpics linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
-#feb-photo1 {
-    width: 400px;
-    height: 300px;
-}
-#mar-photo2 {
-    width: 400px;
-    height: 300px;
-}
-#dec-photo3 {
-    width: 400px;
-    height: 300px;
+#feb-photo1, #dec-photo3, #mar-photo2 {
+    max-width: 400px;
 }
 .jan {
     display: flex;
-    flex-wrap: wrap;
-    gap: 100px;             
+    flex-wrap: wrap;            
     justify-content: center;
     background-color:pink;
     width: 100%;
-    padding: 100px;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    padding: clamp(3rem, 6vw, 6rem)
 }
 .feb {
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;             
+    flex-wrap: wrap;            
     justify-content: center;
     background-color:#F0796E;
     width: 100%;
-    padding: 100px;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    padding: clamp(3rem, 6vw, 6rem);
     min-width: 1024px;
 }
 .march {
     display: flex;
-    flex-wrap: wrap;
-    gap: 175px;             
+    flex-wrap: wrap;            
     justify-content: center;
     background-color:pink;
     width: 100%;
-    padding: 100px;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    padding: clamp(3rem, 6vw, 6rem)
 }
 .dec {
     display: flex;
-    flex-wrap: wrap;
-    gap: 175px;             
+    flex-wrap: wrap;             
     justify-content: center;
     background-color:#F0796E;
     width: 100%;
-    padding: 100px;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    padding: clamp(3rem, 6vw, 6rem)
 }
 .heads {
     display: flex;
