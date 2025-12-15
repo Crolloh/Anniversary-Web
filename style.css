@@ -80,7 +80,7 @@ body {
     }
 }
 #heart-btn:hover {
-    animation: pulsing-button 0.6s ease-in-out infinite
+    animation: pulsing-button 0.6s ease-in-out infinite;
 }
 #heart-container {
     position: fixed;
@@ -118,6 +118,7 @@ body {
 }
 .letter {
     background-color: #EDDFE1;
+    padding-bottom: 100px;
 }
 #letter-for-u {
     display: flex;
@@ -126,6 +127,7 @@ body {
     font-family: 'Playfair Display', cursive;
     color: crimson;
     padding: 25px;
+    margin-top: 0;
 }
 #letter-button {
     display: flex;
@@ -141,6 +143,9 @@ body {
     padding: 20px;
     box-shadow: 5px 4px 10px rgba(0, 0 ,0 ,0.3);
 }
+#letter-button:hover {
+    animation: pulsing-button 0.6s ease-in-out infinite;
+}
 .letter-text {
     background-color: pink;
     display: none;
@@ -149,9 +154,21 @@ body {
     align-items: left;
     margin: 0 auto;
     width: 65%;
-    height: 30%;
-    padding: 150px;
+    height: 600px;
+    padding: 100px;
     margin-top: 25px;
+    box-shadow: 5px 4px 10px rgba(0, 0 ,0 ,0.3);
+    animation: appear 1.5s ease-in-out forwards;
+
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to {
+        transform :translateY(0px);
+    }
 }
 .text-letter {
     color: beige;
@@ -159,7 +176,8 @@ body {
     font-size: 1.75rem;
 }
 #dear, #ending-letter {
-    color: crimson
+    color: crimson;
+    font-family: 'Playfair Display', cursive;
 }
 #ending-letter {
     display: flex;
