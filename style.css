@@ -261,6 +261,9 @@ img {
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
+img:hover {
+    transform: scale(1.1);
+}
 #feb-photo1, #dec-photo3, #mar-photo2 {
     max-width: 400px;
 }
